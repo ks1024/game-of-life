@@ -5,11 +5,12 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class GameLoaderTest {
+	
+	public static final String FILENAME = "src/test/resources/smallExploder.txt";
 
 	@Test
 	public void loadFromFile() {
-		String fileName = "src/test/resources/smallExploder.txt";
-		GameOfLife gameOfLife = GameLoader.loadFromFile(fileName);
+		GameOfLife gameOfLife = GameLoader.loadFromFile(FILENAME);
 		System.out.println(gameOfLife.print());
 		String[] lines = gameOfLife.print().split("\n");
 		assertEquals(". . . . . . . . . . . . . . . ", lines[0]);
