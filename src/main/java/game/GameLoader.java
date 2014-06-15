@@ -30,7 +30,7 @@ public class GameLoader {
 				line = br.readLine();
 				rowNb++;
 			}
-			game = new GameOfLife(colNb, rowNb, cells);
+			game = new GameOfLife(rowNb, colNb, cells);
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();

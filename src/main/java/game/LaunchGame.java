@@ -7,10 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class LaunchGame {
+	
+	public static final Font labelFont = new Font("Monospaced", Font.PLAIN, 12);
 
-	final static Font labelFont = new Font("Monospaced", Font.PLAIN, 12);
-
-	final static String filename = "src/main/resources/line.txt";
+	public static final String FILENAME = "src/main/resources/line.txt";
 
 	// final static String filename = "src/main/resources/glider.txt";
 
@@ -32,7 +32,7 @@ public class LaunchGame {
 		frame.setResizable(false);
 		frame.setVisible(true);
 
-		GameOfLife game = GameLoader.loadFromFile(filename);
+		GameOfLife game = GameLoader.loadFromFile(FILENAME);
 
 		for (int i = 0; i < 1000; i++) {
 			label.setText(game.print());
